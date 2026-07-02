@@ -1,0 +1,47 @@
+# Fertilizer Recommendation Rules
+# Based on ICAR/TNAU guidelines
+
+fertilizers:
+  - name: "Urea"
+    n_content: 46
+    application: "Top dressing"
+    
+  - name: "DAP (Diammonium Phosphate)"
+    n_content: 18
+    p_content: 46
+    application: "Basal application"
+    
+  - name: "MOP (Muriate of Potash)"
+    k_content: 60
+    application: "Basal or top dressing"
+
+crops:
+  rice:
+    optimal_npk:
+      N: 120
+      P: 60
+      K: 60
+    stages:
+      vegetative:
+        n_split: 0.4
+        p_split: 1.0
+        k_split: 0.5
+      flowering:
+        n_split: 0.3
+        k_split: 0.5
+      maturity:
+        n_split: 0.3
+        
+  wheat:
+    optimal_npk:
+      N: 120
+      P: 60
+      K: 40
+    stages:
+      vegetative:
+        n_split: 0.5
+        p_split: 1.0
+        k_split: 1.0
+      flowering:
+        n_split: 0.5
+

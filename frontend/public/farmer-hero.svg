@@ -1,0 +1,60 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="190" fill="#16a34a" opacity="0.1"/>
+  
+  <!-- Farmer Figure -->
+  <!-- Head -->
+  <circle cx="200" cy="120" r="35" fill="#fbbf24"/>
+  
+  <!-- Hat -->
+  <path d="M165 110 Q200 90 235 110 L230 100 Q200 85 170 100 Z" fill="#166534"/>
+  <ellipse cx="200" cy="105" rx="35" ry="8" fill="#15803d"/>
+  
+  <!-- Body -->
+  <rect x="175" y="155" width="50" height="80" rx="5" fill="#22c55e"/>
+  
+  <!-- Arms -->
+  <rect x="145" y="165" width="20" height="60" rx="10" fill="#fbbf24" transform="rotate(-20 155 195)"/>
+  <rect x="235" y="165" width="20" height="60" rx="10" fill="#fbbf24" transform="rotate(20 245 195)"/>
+  
+  <!-- Hands holding tools -->
+  <circle cx="140" cy="220" r="12" fill="#fbbf24"/>
+  <circle cx="260" cy="220" r="12" fill="#fbbf24"/>
+  
+  <!-- Shovel in left hand -->
+  <rect x="125" y="200" width="8" height="40" fill="#78716c" transform="rotate(-20 129 220)"/>
+  <path d="M125 200 L115 190 L135 195 Z" fill="#a8a29e"/>
+  
+  <!-- Seeds in right hand -->
+  <circle cx="265" cy="215" r="4" fill="#fbbf24"/>
+  <circle cx="270" cy="220" r="4" fill="#fbbf24"/>
+  <circle cx="260" cy="225" r="4" fill="#fbbf24"/>
+  
+  <!-- Legs -->
+  <rect x="180" y="235" width="15" height="60" rx="5" fill="#166534"/>
+  <rect x="205" y="235" width="15" height="60" rx="5" fill="#166534"/>
+  
+  <!-- Feet -->
+  <ellipse cx="187" cy="295" rx="12" ry="8" fill="#1f2937"/>
+  <ellipse cx="212" cy="295" rx="12" ry="8" fill="#1f2937"/>
+  
+  <!-- Face Details -->
+  <circle cx="192" cy="115" r="3" fill="#1f2937"/>
+  <circle cx="208" cy="115" r="3" fill="#1f2937"/>
+  <path d="M192 125 Q200 130 208 125" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Crop/Plant beside farmer -->
+  <path d="M280 250 Q285 200 280 150" stroke="#22c55e" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="285" cy="140" r="15" fill="#16a34a"/>
+  <circle cx="275" cy="135" r="12" fill="#22c55e"/>
+  <circle cx="295" cy="135" r="12" fill="#22c55e"/>
+  
+  <!-- Ground/Field -->
+  <ellipse cx="200" cy="310" rx="180" ry="30" fill="#84cc16" opacity="0.3"/>
+  <path d="M50 310 Q100 300 150 310 T250 310 T350 310" stroke="#65a30d" stroke-width="3" fill="none" opacity="0.5"/>
+  
+  <!-- Sun -->
+  <circle cx="320" cy="80" r="25" fill="#fbbf24" opacity="0.8"/>
+  <path d="M320 50 L320 45 M320 115 L320 120 M345 80 L350 80 M295 80 L290 80 M340 60 L343 57 M340 100 L343 103 M300 60 L297 57 M300 100 L297 103" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>
+

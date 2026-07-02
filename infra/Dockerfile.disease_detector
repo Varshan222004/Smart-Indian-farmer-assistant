@@ -1,0 +1,36 @@
+FROM python:3.9.18-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --upgrade pip setuptools wheel
+
+# Copy requirements first for better caching
+COPY ml_services/disease_detector/requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY ml_services/disease_detector/ .
+
+# Create models directory
+RUN mkdir -p models
+
+# Expose port
+EXPOSE 8003
+
+# Start service
+CMD ["python", "app.py"]
+

@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: farmer_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: farmer_assistant
+    networks:
+      - farmer_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.backend
+    container_name: farmer_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - MONGO_URI=mongodb://mongodb:27017/farmer_assistant
+      - JWT_SECRET=${JWT_SECRET:-change_this_secret}
+      - CROP_RECO_SERVICE_URL=http://crop_reco:8001
+      - FERTILIZER_RECO_SERVICE_URL=http://fertilizer_reco:8002
+      - DISEASE_DETECTOR_SERVICE_URL=http://disease_detector:8003
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+      - crop_reco
+      - fertilizer_reco
+      - disease_detector
+    networks:
+      - farmer_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.frontend
+    container_name: farmer_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:5000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - farmer_network
+
+  crop_reco:
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.crop_reco
+    container_name: farmer_crop_reco
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./ml_services/crop_reco:/app
+    networks:
+      - farmer_network
+
+  fertilizer_reco:
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.fertilizer_reco
+    container_name: farmer_fertilizer_reco
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./ml_services/fertilizer_reco:/app
+    networks:
+      - farmer_network
+
+  disease_detector:
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.disease_detector
+    container_name: farmer_disease_detector
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./ml_services/disease_detector:/app
+    networks:
+      - farmer_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  farmer_network:
+    driver: bridge
+
