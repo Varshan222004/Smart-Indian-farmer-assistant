@@ -105,16 +105,109 @@ Smart-Indian-Farmer-Assistant
 
 ## 📸 Screenshots
 
-Create a folder named `screenshots/` and add:
+# 📸 Application Screenshots
 
-- home.png
-- disease.png
-- crop.png
-- weather.png
-- market.png
-- chatbot.png
+## 🏠 Dashboard
 
-Then update this section with image links.
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 🏡 Home
+
+![Home](screenshots/home.png)
+
+---
+
+## 🤖 AI Farming Assistant
+
+![AI Assistant](screenshots/ai-assistant.png)
+
+---
+
+## 🌾 Crop Recommendation
+
+### Input
+
+![Crop Recommendation](screenshots/crop-recommendation.png)
+
+### Result
+
+![Crop Recommendation Result](screenshots/crop-recommendation-result.png)
+
+---
+
+## 🌿 Plant Disease Detection
+
+### Upload & Prediction
+
+![Disease Detection](screenshots/disease-detection.png)
+
+### Prediction Details
+
+![Disease Detection Result](screenshots/disease-detection-result.png)
+
+---
+
+## 🌦️ Weather & Irrigation Dashboard
+
+![Weather](screenshots/weather-dashboard.png)
+
+---
+
+## 💹 Agricultural Market Prices
+
+![Market Prices](screenshots/market-prices.png)
+
+---
+
+## 🏛️ Government Schemes
+
+![Government Schemes](screenshots/government-schemes.png)
+
+---
+
+## 🔔 Smart Notifications
+
+![Notifications](screenshots/notifications.png)
+
+---
+
+## 📅 Crop Calendar
+
+### Overview
+
+![Crop Calendar](screenshots/crop-calendar.png)
+
+### Monthly Planner
+
+![Crop Calendar Monthly](screenshots/crop-calendar-monthly.png)
+
+### Task Scheduler
+
+![Crop Calendar Tasks](screenshots/crop-calendar-tasks.png)
+
+---
+
+## 💰 Profit & Loss Calculator
+
+### Input
+
+![Profit Calculator](screenshots/profit-loss-input.png)
+
+### Financial Summary
+
+![Profit Summary](screenshots/profit-loss-summary.png)
+
+### Detailed Analysis
+
+![Profit Analysis](screenshots/profit-loss-analysis.png)
+
+---
+
+## 🌐 Multilingual Support
+
+![Multilingual Support](screenshots/multilingual-support.png)
 
 ---
 
